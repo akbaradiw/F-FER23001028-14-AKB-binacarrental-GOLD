@@ -1,0 +1,12 @@
+@media screen and (max-width: 576px) {
+  #faq-text1 {
+    display: flex;
+    justify-content: center;
+  }
+  #faq-text2 {
+    display: flex;
+    font-size: small;
+    justify-content: center;
+    padding-bottom: 25px;
+  }
+}

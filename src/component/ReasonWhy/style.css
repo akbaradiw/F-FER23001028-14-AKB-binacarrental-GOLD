@@ -1,0 +1,13 @@
+.icon-image {
+  width: 85px;
+  height: 75px;
+  padding-right: 10px;
+}
+
+.reason-text {
+  padding-left: 10px;
+}
+
+.reason-text h5 {
+  font-size: medium;
+}

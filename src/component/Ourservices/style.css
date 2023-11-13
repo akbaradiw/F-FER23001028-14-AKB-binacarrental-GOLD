@@ -1,0 +1,12 @@
+@media screen and (max-width: 576px) {
+  #woman {
+    width: 300px;
+    height: 310px;
+    margin-right: 40px;
+  }
+
+  .our-services h4 {
+    width: 328px;
+    height: 72px;
+  }
+}

@@ -1,0 +1,24 @@
+#card-testi {
+  background-color: #f1f3ff;
+  display: flex;
+  justify-content: space-around;
+}
+
+.testi-image {
+  width: 80px;
+  height: 80px;
+}
+
+#ratingcust {
+  width: 110px;
+  height: 100px;
+}
+
+.carousel-item h5 {
+  font-size: medium;
+  padding-bottom: 20px;
+}
+
+.carousel-item h6 {
+  font-size: small;
+}

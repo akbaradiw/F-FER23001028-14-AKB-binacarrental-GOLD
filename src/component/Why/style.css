@@ -1,0 +1,15 @@
+.why {
+  padding-left: 136px;
+  font-style: 24px;
+}
+
+@media screen and (max-width: 576px) {
+  .why h4 {
+    display: flex;
+    padding-left: 118px;
+    padding-top: 10px;
+  }
+  .why p {
+    padding-left: 28px;
+  }
+}
