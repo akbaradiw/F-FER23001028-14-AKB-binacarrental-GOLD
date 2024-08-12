@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Container, Col } from "react-bootstrap";
 import californiawoman from "../../assets/mbaksenyum.png";
-import "./style.css";
+// import "./style.css";
 
 const Ourservices = () => {
   let listOurServices = [
@@ -23,26 +23,23 @@ const Ourservices = () => {
   ];
 
   return (
-    <div className="ours">
-      <Container fluid className="mt-lg-5">
-        <Row>
-          <Col className="col-12 col-lg-6 text-center  mt-2">
-            <img src={californiawoman} alt="hiii" id="woman" />
-          </Col>
-          <Col className="our-services col-12 col-lg-5 ms-lg-2 mt-lg-5">
-            <h4 className="py-3">Best Car Rental for any kind of trip in (Lokasimu)!</h4>
-            <p className="pb-1">
+      <div className="grid px-10 lg:grid-cols-2 lg:px-60 lg:pt-20 pt-20">
+          <div className=" lg:mt-2 px-4 lg:px-0">
+            <img src={californiawoman}  alt="hiii" id="woman" />
+          </div>
+          <div>
+            <h4 className="py-3 font-bold">Best Car Rental for any kind of trip in (Lokasimu)!</h4>
+            <p className="pb-1 font-semibold">
               Sewa mobil di Lokasimu bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting, dll.
             </p>
-            <div>
+            <div className="font-semibold">
               {listOurServices.map((obj) => {
                 return <p> ☑ {obj.description}</p>;
               })}
             </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+          </div>
+      </div>
+
   );
 };
 

@@ -33,8 +33,8 @@ function Testimonial() {
             <div className="carousel-inner">
               {testimonialText.map((obj) => {
                 return (
-                  <div className="carousel-item active">
-                    <Card style={{ background: "#F1F3FF" }}>
+                  <div className="carousel-item active lg:px-40">
+                    <Card  style={{ background: "#F1F3FF" }}>
                       <Card.Body>
                         <img className="testi-image" src={obj.Image} />
                         <img src={rating} alt="rate" id="ratingcust" />

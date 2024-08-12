@@ -36,6 +36,7 @@ const Footer = () => {
         </Col>
         <Col className="col-12 col-lg-3 mb-4">
           <h6>Connect with us</h6>
+          <div className="flex">
           <i className="ps-1">
             <FaFacebook />
           </i>
@@ -51,6 +52,7 @@ const Footer = () => {
           <i className="ps-2">
             <FaTwitch />
           </i>
+          </div>
         </Col>
         <Col className="col-12 col-lg-3 ps-lg-1">
           <h6>Copyright Binar 2022</h6>
