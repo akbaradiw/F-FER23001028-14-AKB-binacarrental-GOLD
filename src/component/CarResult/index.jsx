@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Container, Card, Row, Col } from "react-bootstrap";
-import "./style.css";
 
 const CarResult = () => {
   const [car, setCar] = useState([]);
@@ -52,58 +51,59 @@ const CarResult = () => {
   };
 
   return (
-    <div>
-      <div className="search-dropdown">
-        <div>
-          <p>Nama Mobil</p>
-          <input onChange={handleChangeName} placeholder=" cari mobil" />
+    <div className="lg:pt-20 pt-16">
+      <div className="grid  lg:grid-cols-4 md:grid-cols-2 lg:px-80 px-10  lg:py-10 gap-4">
+        <div className="text-center border p-3 rounded-md">
+          <p className="text-lg lg:text-base font-bold">Nama Mobil</p>
+          <input className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={handleChangeName} placeholder=" cari mobil" />
         </div>
-        <div>
-          <p>Kategori</p>
-          <select onChange={handleSelectType}>
+        <div className="text-center border p-3 rounded-md">
+          <p className="text-lg lg:text-base font-bold">Kategori</p>
+          <select className="lock w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={handleSelectType}>
             <option value={""}>Masukan Kapasitas Mobil</option>
             <option value={"medium"}>Medium</option>
             <option value={"large"}>Large</option>
           </select>
         </div>
-        <div>
-          <p>Harga</p>
-          <select onChange={handleSelectPrice}>
+        <div className="text-center border p-3 rounded-md">
+          <p className="text-lg lg:text-base font-bold">Harga</p>
+          <select className="lock w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={handleSelectPrice}>
             <option value={""}>Masukan Harga Sewa Perhari</option>
             <option value={"500000"}>{"<700.000"}</option>
             <option value={"350000"}> {"<350.000"}</option>
             <option value={"330000"}>{"<330.000"}</option>
           </select>
         </div>
-        <div>
-          <p>Status</p>
-          <select value={status} onChange={handleSelectStatus}>
+        <div className="text-center border p-3 rounded-md">
+          <p className="text-lg lg:text-base font-bold">Status</p>
+          <select className="lock w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value={status} onChange={handleSelectStatus}>
             <option value={""}>Status</option>
             <option value={"false"}>Available</option>
             <option value={"true"}>Not Available</option>
           </select>
         </div>
-        <div>
-          <button onClick={isFilter ? handleReset : handleSubmit} id="button-result">
+        
+      </div>
+      <div className=" text-center md:pt-10  lg:pt-1 pt-4  ">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={isFilter ? handleReset : handleSubmit} id="button-result">
             {isFilter ? "reset" : "submit"}
           </button>
         </div>
-      </div>
-      <div className="car-list">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 pt-10 lg:px-20 px-4 gap-4 lg:gap-10">
         {car.map((item) => (
           <Container>
             <Row>
               <Col>
                 <Card>
-                  <Card.Body>
-                    <Card.Img src={item.image} />
-                    <Card.Title>
-                      <h4>{item.name}</h4>
-                      <h5>{item.price}</h5>
-                      <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h6>
+                  <Card.Body >
+                    <Card.Img className="object-center hover:object-scale-down object-cover h-40 rounded-lg" src={item.image} />
+                    <Card.Title className=" ">
+                      <h4 className="pt-3 text-base">{item.name}</h4>
+                      <h5 className="py-2 text-base">{item.price}</h5>
+                      <h6 className="pb-4 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h6>
                     </Card.Title>
-                    <Link to={`/detail/${item.id}`}>
-                      <button variant="success">Pilih Mobil</button>
+                    <Link  to={`/detail/${item.id}`}>
+                      <button className="bg-green-500 hover:bg-green-700 text-white  py-1 px-2 rounded-md">Pilih Mobil</button>
                     </Link>
                   </Card.Body>
                 </Card>

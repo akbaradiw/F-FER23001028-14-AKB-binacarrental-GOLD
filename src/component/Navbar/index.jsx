@@ -2,7 +2,7 @@ import blueimg from "../../assets/biru.png";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { LiaServicestack } from "react-icons/lia";
-import { FaQuestion, FaQrcode } from "react-icons/fa";
+import { FaQrcode, FaCarSide } from "react-icons/fa";
 import { IoListOutline } from "react-icons/io5";
 import { GoCodeReview } from "react-icons/go";
 
@@ -25,10 +25,10 @@ const Navbar = () => {
                   Our Services
                 </Link>
                 <Link
-                  to="/"
+                  to="/result"
                   className="text-black font-semibold   text-md"
                 >
-                  Why Us
+                  Cars
                 </Link>
                 <Link
                   to="/"
@@ -72,11 +72,11 @@ const Navbar = () => {
             </div>
             <div>
               <Link
-                to={"/"}
+                to={"/result"}
                 className="flex items-center flex-col justify-center md:text-2xl  text-white hover:text-green-200"
               >
-                <FaQuestion className="w-6 h-6 md:w-10 md:h-10  md:pb-2" />
-                Why Us
+                <FaCarSide className="w-6 h-6 md:w-10 md:h-10  md:pb-2" />
+                Cars
               </Link>
             </div>
 

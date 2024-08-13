@@ -21,7 +21,7 @@ const Footer = () => {
   ];
 
   return (
-    <Container className="py-4 mt-lg-4">
+    <Container className="pt-20 mt-lg-4">
       <Row>
         <Col className="col-12 col-lg-3 mb-3">
           {address.map((obj) => {

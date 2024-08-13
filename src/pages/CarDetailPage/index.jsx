@@ -3,8 +3,7 @@ import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { Container, Card } from "react-bootstrap";
-import "./style.css";
+import { Card } from "react-bootstrap";
 
 const CarDetailPage = () => {
   const param = useParams();
@@ -42,34 +41,43 @@ const CarDetailPage = () => {
   return (
     <div>
       <Navbar />
-      <div className="car-info">
-        <div className="rent-rules">
-          <Card>
-            <h4>Tentang Paket</h4>
-            <h6>Include</h6>
+      <div className="pt-20 ">
+      <div className="lg:flex lg:justify-center lg:gap-40">
+          <Card className="m-4 " >
+            <div className="p-10 ">
+            <h4 className="font-bold lg:text-xl text-base">Tentang Paket</h4>
+            <div className="lg:py-4 py-2">
+            <h6 className="text-base lg:text-lg" >Include</h6>
             {includeList.map((inc) => {
-              return <p> . {inc.include}</p>;
+              return <p className="text-sm lg:text-base"> . {inc.include}</p>;
             })}
-            <h6>Exclude</h6>
+            </div>
+            <div className="pb-3">
+            <h6 className="text-base lg:text-lg">Exclude</h6>
             {exculdeList.map((exc) => {
-              return <p> . {exc.exclude}</p>;
+              return <p className="text-sm lg:text-base"> . {exc.exclude}</p>;
             })}
-            <h6>Refund, Reschedule, Overtime</h6>
+            </div>
+            <h6 className="text-base lg:text-lg">Refund, Reschedule, Overtime</h6>
             {rulesList.map((rul) => {
-              return <p> . {rul.rules}</p>;
+              return <p className="text-sm lg:text-base"> . {rul.rules}</p>;
             })}
+            </div>
           </Card>
-        </div>
-        <div className="car-info-3">
-          <Card>
-            <img src={carDetail.image} />
-            <h5>{carDetail.name}</h5>
-            <p>6-8 orang</p>
-            <h6>Total: {carDetail.price}</h6>
+       
+        <div className="lg:pt-10 p-4">
+          <Card className="lg:p-3 p-2">
+            <img className="lg:w-full md:w-full w-80" src={carDetail.image} />
+            <div className="ps-2">
+            <h5 className="font-bold lg:text-lg md:text-lg text-base">{carDetail.name}</h5>
+            <p className="text-sm md:text-base lg:text-base">6-8 orang</p>
+            <h6 className="text-sm md:text-base lg:text-base">Total: {carDetail.price}</h6>
+            </div>
           </Card>
         </div>
       </div>
       <Footer />
+      </div>
     </div>
   );
 };
